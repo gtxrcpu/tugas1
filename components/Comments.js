@@ -26,7 +26,7 @@ export default function Comments({ darkMode }) {
     if (!newComment.trim()) return;
 
     try {
-      const res = await axios.post("http://localhost:5000/comments/add", {
+      const res = await axios.post("http://localhost:5000/comments", {
         text: newComment,
       });
       setComments([res.data, ...comments]);
